@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Website</title>
+    <title>School Games</title>
     <style>
         body, html {
             margin: 0;
@@ -11,17 +11,41 @@
             height: 100%;
             overflow: hidden;
         }
-        iframe {
+        #ad-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #main-content {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://study-ela.online/uv.html?site=https://now.gg/play/roblox-corporation/5349/roblox" title="Embedded Website"></iframe>
+    <div id="ad-container">
+        <!-- Google AdSense Code -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4642544545879681"
+     crossorigin="anonymous"></script>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div id="main-content">
+        <iframe src="https://study-ela.online/uv.html?site=https://now.gg/play/roblox-corporation/5349/roblox" title="School Games"></iframe>
+    </div>
+    <script>
+        // Simulate ad duration (e.g., 10 seconds)
+        setTimeout(() => {
+            document.getElementById('ad-container').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }, 10000); // 10000 milliseconds = 10 seconds
+    </script>
 </body>
 </html>
